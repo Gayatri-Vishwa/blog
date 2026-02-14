@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  font-family: Inter, system-ui, Arial;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* Typography plugin enable */
+@plugin "@tailwindcss/typography";
+/* Allow editor inline colors to work */
+.prose span[style] {
+  color: inherit !important;
+}
+
+.prose * {
+  all: revert;
+}
