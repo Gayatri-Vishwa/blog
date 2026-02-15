@@ -186,6 +186,7 @@ export default function PostForm({ post }) {
           label="Featured Video :"
           type="file"
           className="mb-4"
+          placeholder="Upload a short video (mp4, webm)"
           accept="video/mp4,video/webm,video/ogg"
           {...register("video", { required: false })}
         />
