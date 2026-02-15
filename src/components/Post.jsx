@@ -167,7 +167,7 @@ export default function Post() {
             >
               {liked ? "❤️" : "🤍"}
             </button>
-            <span className="text-lg sm:text-xl">{likes}</span>6+
+            <span className="text-lg sm:text-xl">{likes}</span>
           </div>
         </div>
       </Container>
