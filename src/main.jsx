@@ -20,6 +20,7 @@ import EditPost from "./pages/EditPost";
 import {Post} from './components/index.js'
 import AllPosts from "./pages/AllPosts.jsx";
 import MyPosts from "./pages/MyPosts.jsx";
+import Guidelines from "./pages/Guidelines";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,15 @@ const router = createBrowserRouter([
                 <AuthLayout authentication>
                     {" "}
                     <EditPost />
+                </AuthLayout>
+            ),
+        },
+        {
+            path: "/guidelines",
+            element: (
+                <AuthLayout >
+                    {" "}
+                    <Guidelines />
                 </AuthLayout>
             ),
         },

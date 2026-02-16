@@ -35,21 +35,27 @@ function PostCard({$id,title,featuredImage,createdAt  }) {
     
       // <Link to={`/post/${$id}`}> 
       <Link to={`/post/${$id}`}> 
-      {/* <div className='w-full bg-gray-100 rounded-xl  p-4 '> */}
-      {/* <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-1"> */}
-<div className="rounded-xl overflow-hidden bg-white dark:bg-gray-800 
+   
+{/* <div className="rounded-xl overflow-hidden bg-white dark:bg-gray-800 
   shadow-lg dark:shadow-lg p-4 transition-all duration-300 hover:shadow-2xl dark:hover:shadow-2xl">
-  
+   */}
+   <div className="h-[340px] rounded-xl overflow-hidden bg-white dark:bg-gray-800 
+shadow-lg p-4 transition-all duration-300 hover:shadow-2xl 
+flex flex-col">
+
 
         <div className='w-full justify-center mb-4'>
-          <div className="w-full h-48 overflow-hidden rounded-xl">
-            <img src={appwriteService.getFilePreview(featuredImage)} alt={title}  className="w-full h-48 object-cover"
+          {/* <div className="w-full h-48 overflow-hidden rounded-xl"> */}
+          <div className="w-full h-44 overflow-hidden rounded-xl flex-shrink-0">
+            <img src={appwriteService.getFilePreview(featuredImage)} alt={title}  className="w-full h-full  object-cover"
             //  className='rounded-xl ' 
              />
              
        </div>
        <div className="p-5">
-  <h2 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2 dark:text-gray-100">
+  {/* <h2 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2 dark:text-gray-100"> */}
+  <h2 className="text-lg font-semibold text-gray-800 mb-2 dark:text-gray-100
+overflow-hidden text-ellipsis line-clamp-2 min-h-[3.2rem]">
     {title}
   </h2>
 
@@ -64,8 +70,7 @@ function PostCard({$id,title,featuredImage,createdAt  }) {
 </div>
 
         </div>
-       
-        {/* <h2 className='text-xl font-bold'>{title}</h2> */}
+
       </div>
 
       </Link>
