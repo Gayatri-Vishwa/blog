@@ -42,7 +42,8 @@ function Home() {
       <div className="w-full bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-20  rounded-xl shadow-sm mt-3">
         <div className="text-center max-w-3xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Share Your Knowledge With The World
+            {/* Share Your Knowledge With The World */}
+            ThinkNest — Learn Smart, Score Better
           </h1>
           <p className="text-lg opacity-80 mb-6">
           A platform where students share and access study notes for exams and interview preparation

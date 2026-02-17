@@ -6,6 +6,7 @@ return ( <div className="py-12"> <Container> <h1 className="text-3xl font-bold m
 
 
     <p className="mb-6">
+      (ThinkNest — Learn Smart, Score Better)
       This platform is a study notes sharing website. Please upload only
       educational and learning related content so that students can learn
       easily from your notes.
