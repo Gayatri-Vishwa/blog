@@ -45,7 +45,7 @@ function Home() {
             Share Your Knowledge With The World
           </h1>
           <p className="text-lg opacity-80 mb-6">
-            A place where developers write, learn and grow together.
+          A platform where students share and access study notes for exams and interview preparation
           </p>
         <p className="text-sm opacity-70 mt-6">
   Please read our Posting Guidelines before publishing articles.
