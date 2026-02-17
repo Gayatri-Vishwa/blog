@@ -12,14 +12,15 @@ function Home() {
   //         }
   //     })
   // }, [])
-
+  const userData = useSelector((state) => state.auth.userData);
   useEffect(() => {
     appwriteService.getHomePosts().then((res) => {
       if (res) setPosts(res.documents);
     });
   }, []);
 
-  if (posts.length === 0) {
+  // if (posts.length === 0) {
+  if (!userData  ) {
     return (
       <div className="w-full py-8 mt-4 text-center">
         <Container>

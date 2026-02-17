@@ -17,12 +17,12 @@ function LogoutBtn() {
     const logoutHandler = async () => {
     await authService.logout();
 
-    localStorage.clear();
-    sessionStorage.clear();
+    // localStorage.clear();
+    // sessionStorage.clear();
 
     dispatch(logout());
 
-    window.location.reload();   // ← ye magic line hai
+    // window.location.reload();   // ← ye magic line hai
 };
 
   return (
