@@ -2,11 +2,11 @@
 import React from 'react'
 import thinknest from "../assets/last.png"
 
-function Logo({width="70px", height="70px"}) {
+function Logo({width="50px", height="50px"}) {
   return (
      <div className='flex items-center space-x-2'>
 
-    <div className="w-${width} h-${height} rounded-full overflow-hidden"
+    <div className=" rounded-full overflow-hidden"
     style={{ width: width, height: height }}>
 
       <img 

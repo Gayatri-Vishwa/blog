@@ -6,13 +6,7 @@ import {logout} from '../../store/authSlice'
 function LogoutBtn() {
     const dispatch=useDispatch()
 
-    // const logoutHandler=()=>{
-    //     authService.logout().then(()=>{                //appwrite logout function return promise
-            
-    //         dispatch(logout())             //store updated
-    //     }).catch(err=> "error occured")
-    // }
-
+ 
 
     const logoutHandler = async () => {
     await authService.logout();
@@ -22,13 +16,11 @@ function LogoutBtn() {
 
     dispatch(logout());
 
-    // window.location.reload();   // ← ye magic line hai
+    window.location.reload();   // ← ye magic line hai
 };
 
   return (
-    //    <button
-    // className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
-
+  
       <button
       onClick={logoutHandler}
       className="
