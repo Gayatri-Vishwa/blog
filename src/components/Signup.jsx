@@ -27,18 +27,19 @@ function Signup() {
       }
   return (
     <div className="flex items-center justify-center">
-            <div className={`mx-auto w-full max-w-lg bg-gray-200 dark:bg-gray-100  rounded-xl p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg bg-gray-200 dark:bg-gray-800  rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
-                    <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
-                    </span>
+                  <Logo width="40px" height="40px"/>
+                    {/* <span className="inline-block w-full max-w-[100px] text-black/90  dark:text-white text-2xl font-semibold">
+                      ThinkNest
+                    </span> */}
                 </div>
-                <h2 className="text-center text-2xl font-bold text-black leading-tight">Sign up to create account</h2>
-                <p className="mt-2 text-center text-base text-black/60">
+                <h2 className="text-center text-2xl font-bold text-black/90  dark:text-white  leading-tight">Sign up to create account</h2>
+                <p className="mt-2 text-center text-base text-black/90  dark:text-white ">
                     Already have an account?&nbsp;
                     <Link
                         to="/login"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium text-primary transition-all duration-200 hover:underline text-blue-500"
                     >
                         Sign In
                     </Link>

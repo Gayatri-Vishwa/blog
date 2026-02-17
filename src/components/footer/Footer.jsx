@@ -12,7 +12,7 @@ function Footer() {
 
           {/* Logo + copyright */}
           <div className="flex flex-col items-start w-full sm:w-auto">
-            <Logo width="100px" />
+            <Logo width="70px" height="70px" />
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
               &copy; 2026 DevUI. All Rights Reserved.
             </p>

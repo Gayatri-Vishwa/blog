@@ -18,7 +18,7 @@ const Input= React.forwardRef(function Input({
     <div className="w-full">
         {label &&
         <label htmlFor={props.id}
-         className="inline-block pl-1 mb-1"> {label}</label>
+         className="inline-block pl-1 mb-1 text-black/90  dark:text-white  "> {label}</label>
         }
         <input type="text" className={`px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border-2 border-gray-200 w-full
          ${className}`}

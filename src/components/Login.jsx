@@ -55,18 +55,19 @@ if(session) {
     <div
     className='flex my-8 items-center justify-center w-full'
     >
-        <div className={`mx-auto w-full max-w-lg bg-gray-200 dark:bg-gray-100 rounded-xl p-10 border border-black/10`}>
+        <div className={`mx-auto w-full max-w-lg bg-gray-200 dark:bg-gray-800 rounded-xl p-10 border border-black/10`}>
         <div className="mb-2 flex justify-center">
-                    <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
-                    </span>
+                   {/* <span className="inline-block w-full max-w-[100px] text-black/90  dark:text-white  text-2xl font-semibold">
+                      ThinkNest
+                    </span> */}
+                    <Logo width="40px" height="40px"/>
         </div>
-        <h2 className="text-center text-2xl font-bold leading-tight text-black">Sign in to your account</h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <h2 className="text-center text-2xl font-bold leading-tight text-black/90  dark:text-white ">Sign in to your account</h2>
+        <p className="mt-2 text-center text-base text-black/90  dark:text-white ">
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium text-primary transition-all duration-200 hover:underline text-blue-500"
                     >
                         Sign Up
                     </Link>

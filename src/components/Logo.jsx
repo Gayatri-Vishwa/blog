@@ -2,14 +2,17 @@
 import React from 'react'
 import thinknest from "../assets/last.png"
 
-function Logo() {
+function Logo({width="70px", height="70px"}) {
   return (
      <div className='flex items-center space-x-2'>
-    <div className="w-12 h-12 rounded-full overflow-hidden">
+
+    <div className="w-${width} h-${height} rounded-full overflow-hidden"
+    style={{ width: width, height: height }}>
+
       <img 
         src={thinknest} 
         alt="ThinkNest Logo" 
-        className="w-full h-12 object-cover"
+        className={`w-full h-full object-cover`}
       />
 
     </div>
