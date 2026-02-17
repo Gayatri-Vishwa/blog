@@ -25,7 +25,7 @@ function Header() {
       <Container>
         <div className="flex items-center justify-between">
           <Link to="/">
-            <Logo width="70px" />
+            <Logo />
           </Link>
 
           {/* Hamburger Menu for Mobile */}
