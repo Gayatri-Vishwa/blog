@@ -1,24 +1,34 @@
 
-import React from 'react'
-import thinknest from "../assets/last.png"
+import React from "react";
+import thinknest from "../assets/last.png";
 
-function Logo({width="50px", height="50px"}) {
+function Logo() {
   return (
-     <div className='flex items-center space-x-2'>
+    <div className="flex items-center gap-2">
 
-    <div className=" rounded-full overflow-hidden"
-    style={{ width: width, height: height }}>
-
-      <img 
-        src={thinknest} 
-        alt="ThinkNest Logo" 
-        className={`w-full h-full object-cover`}
+      {/* Logo Image */}
+      <img
+        src={thinknest}
+        alt="ThinkNest Logo"
+        className="
+        rounded-full object-cover
+        w-7 h-7
+        md:w-10 md:h-10
+        "
       />
 
+      {/* Logo Text */}
+      <span className="
+        font-bold text-black dark:text-white
+        text-base
+        md:text-xl
+        leading-none
+      ">
+        ThinkNest
+      </span>
+
     </div>
-      <span className='text-2xl text-black font-bold dark:text-white'>ThinkNest</span>
-      </div>
-  )
+  );
 }
 
-export default Logo
+export default Logo;
