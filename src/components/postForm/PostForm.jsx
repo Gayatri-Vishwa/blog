@@ -84,10 +84,6 @@ React.useEffect(() => {
       }
       toast.loading("Submitting post...");
         // Check if title changed (for update)
-    // if (post && data.title.trim() === initialTitle) {
-    //   toast.error("Please change the title a little to update slug!");
-    //   return;
-    // }
       if (!data.slug && !post) {
       toast.error("Please change the title a little to update slug!");
       return;
@@ -146,9 +142,6 @@ React.useEffect(() => {
       }
     } catch (err) {
       toast.dismiss();
-       if (post && data.title.trim() === initialTitle) {
-      toast.error("Please change the title a little to update slug!");
-      return;}
       toast.error(err?.message || "Something went wrong!");
       console.error(err);
     }
