@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import appwriteService from "../appwrite/config";
 import { Container, PostCard } from "../components/index";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+
 function Home() {
   const [posts, setPosts] = useState([]);
 
@@ -54,9 +54,7 @@ function Home() {
   <a href="/guidelines" className="underline ml-1 font-medium text-blue-500 hover:text-blue-700">
     View Guidelines
   </a>
-  {/* <Link to="/guidelines" className="underline ml-1 font-medium text-blue-500 hover:text-blue-700">
-  View Guidelines
-</Link> */}
+
 </p>
 
           <br />

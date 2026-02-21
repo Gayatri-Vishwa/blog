@@ -26,6 +26,7 @@ export default function PostForm({ post }) {
     },
   });
 
+  const initialTitle = post?.title || ""; // Store initial title for comparison
   const navigate = useNavigate();
   const userData = useSelector((state) => state.auth.userData);
 
@@ -40,14 +41,31 @@ export default function PostForm({ post }) {
   }, []);
 
   // Update slug when title changes
-  React.useEffect(() => {
-    const subscription = watch((value, { name }) => {
-      if (name === "title") {
-        setValue("slug", slugTransform(value.title), { shouldValidate: true });
+  // React.useEffect(() => {
+  //   const subscription = watch((value, { name }) => {
+  //     if (name === "title") {
+  //       setValue("slug", slugTransform(value.title), { shouldValidate: true });
+  //     }
+  //   });
+  //   return () => subscription.unsubscribe();
+  // }, [watch, slugTransform, setValue]);
+  // const initialTitle = post?.title || "";
+
+React.useEffect(() => {
+  const subscription = watch((value, { name }) => {
+    if (name === "title") {
+      const newTitle = value.title?.trim() || "";
+
+      // Only update slug if title changed significantly
+      if (newTitle && newTitle !== initialTitle) {
+        setValue("slug", slugTransform(newTitle), { shouldValidate: true });
+      } else {
+        setValue("slug", "", { shouldValidate: true }); // or leave old slug if you want
       }
-    });
-    return () => subscription.unsubscribe();
-  }, [watch, slugTransform, setValue]);
+    }
+  });
+  return () => subscription.unsubscribe();
+}, [watch, slugTransform, setValue, initialTitle]);
 
   const submit = async (data) => {
     try {
@@ -65,6 +83,11 @@ export default function PostForm({ post }) {
         }
       }
       toast.loading("Submitting post...");
+        // Check if title changed (for update)
+    if (post && data.title.trim() === initialTitle) {
+      toast.error("Please change the title a little to update slug!");
+      return;
+    }
 
       if (!userData) throw new Error("User data not loaded");
 
